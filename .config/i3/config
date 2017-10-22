@@ -214,7 +214,7 @@ bar {
 }
 
 #bindsym $mod+shift+l exec i3lock
-bindsym $mod+shift+l exec ~/.config/i3/lock2.sh
+bindsym $mod+shift+l exec ~/.config/i3/i3scripts/i3lock-fancy-master/lock
 
 
 
@@ -252,6 +252,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # load wallpaper
 
 exec firefox
-exec_always feh --bg-scale ~/.config/i3/background.jpg 
+exec_always feh --bg-scale /home/local/ANT/bretzke/Bilder/background.jpg 
 
 exec --no-startup-id compton -f
