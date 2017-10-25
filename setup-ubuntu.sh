@@ -74,7 +74,7 @@ sudo apt install -y nextcloud-client
 sudo apt install -y calibre
 #sudo apt install -y fetchmail
 #sudo apt install -y fetchmailconf
-sudo apt install -y neomutt
+#sudo apt install -y neomutt
 #sudo apt install -y mutt
 
 
@@ -155,7 +155,6 @@ sudo apt install cool-retro-term -y
 
 # buku installation
 #sudo apt-get install python3-cryptography python3-bs4
-#buku
 #cd /tmp/
 #git clone https://github.com/jarun/Buku.git
 #cd Buku/
@@ -172,9 +171,6 @@ sudo apt install cool-retro-term -y
 #wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.9.6/linux-image-4.9.6-040906-generic_4.9.6-040906.201701260330_amd64.deb
 #sudo dpkg -i linux-headers-4.9*.deb linux-image-4.9*.deb
 
-
-# amazon ember font
-
 # numix icons
 wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
 sudo apt-key add - < Release.key
@@ -182,49 +178,7 @@ sudo add-apt-repository ppa:numix/ppa
 sudo apt update
 sudo apt install numix-gtk-theme numix-icon-theme-circle -y
 
-## mutt install testing
-
-#cd Downloads/
-#wget -c ftp://ftp.mutt.org/pub/mutt/mutt-1.8.0.tar.gz
-#tar xf mutt-1.8.0.tar.gz
-#cd mutt-1.8.0
-#sudo apt-get install build-essential libncurses5-dev
-#cat INSTALL
-#mc
-#./configure --enable-imap --with-ssl
-#./configure --enable-imap --enable-sasl
-#vim INSTALL
-#./configure --enable-imap --with-sasl
-#./configure --enable-imap --with-gss
-#./configure --enable-imap +use_sidebar
-#sudo apt-get install checkinstall
-#./configure --enable-imap
-#sudo checkinstall -D make install
-#muttcd
-#/usr/local/bin/mutt
-#ln -s /usr/local/bin/mutt /usr/local/mutt
-#sudo ln -s /usr/local/bin/mutt /usr/local/mutt
-#chmod =x /usr/bin/mutt
-#chmod +x /usr/bin/mutt
-#cd /usr/bin/
-#ls -la | grp mutt
-#sudo rm mutt
-#echo $Path
-#echo $PATH
-#mutt
-#file mutt
-#sudo ln -s /usr/local/bin/mutt /usr/local/muttmutt -v
-#ls
-#ls -la | grep mutt
-#mutt -v
-#sudo ln -s /usr/local/bin/mutt /usr/local/muttmutt -v
-#ls
-#ls -la | grep mutt
-#vim .muttrc
-#mutt -v
-###################################
-
-## mutt install version 2
+## mutt installation
 
 #sudo add-apt-repository ppa:jonathonf/backports -y
 #sudo apt update
@@ -236,49 +190,17 @@ sudo apt install numix-gtk-theme numix-icon-theme-circle -y
 ## rofi install
 
 #sudo apt-get install rofi
+
+#### rofi command
 #rofi -modi drun -show drun
 #rofi -combi-modi window,drun -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
 #rofi -modi window,drun -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
 #rofi -modi window,drun,ssh -show drun -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
 #rofi -combi-modi window,drun,run,ssh -modi combi -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
-#vim .bashrc
-#vim .bash_it/custom/example.bash
-#vim .bashrc.bak
-#vim .bash_it/bash_it.sh
-#vim .bash_it/aliases/custom.aliases.bash
-#exit
-#rof
-#vim .bash_aliases
-#exit
-#rofi -modi drun -show drun
-#rofi -combi-modi window,drun -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
-#rofi -modi window,drun -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
-#rofi -modi window,drun,ssh -show drun -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
-#vim .bashrc
-#vim .bash_it/custom/example.bash
-#vim .bashrc.bak
-#vim .bash_it/bash_it.sh
-#vim .bash_it/aliases/custom.aliases.bash
-#exit
-#vim .bash_aliases
-#exit
-#buku -ist
-#buku -list
-#rofi -combi-modi window,drun,run,ssh -modi combi -show combi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000"
-#rofi -combi-modi window,drun,run,ssh -modi combi -show combi
-#rof
+
 
 ######################
 
-
-# Copy the config files
-
-# remmina RDP, admin, ANT
-# file-ber1-11
-# print-ber1-11
-
-# linphone
-# "Team meeting" <sip:60478229**310941@vtc.amazon.com>
 
 echo "\n\nInstallation finished..."
 echo "\nPlease reboot the system!"
