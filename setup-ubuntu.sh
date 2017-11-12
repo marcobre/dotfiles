@@ -62,8 +62,10 @@ sudo apt install -y fontconfig-infinality
 sudo apt install -y cmatrix
 sudo apt install -y git
 sudo apt install -y pidgin-sipe
+sudo apt install -y rxvt
+
 # optional packages
-sudo apt install -y amazon-thunderbird-config
+
 sudo apt install -y mate-core
 sudo apt install -y mate-desktop-environment
 sudo apt install -y conky
@@ -114,10 +116,12 @@ sudo make install
 sudo apt install feh -y
 sudo apt install i3lock -y
 sudo apt install arandr -y
+sudo apt install lxappearance
 sudo apt install compton -y
 sudo apt install i3blocks -y
 #so lock screen capture works
 sudo apt install scrot -y
+sudo apt install ranger -y
 
 #$ /usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2017.01.02_all.deb keyring.deb SHA256:4c3c6685b1181d83efe3a479c5ae38a2a44e23add55e16a328b8c8560bf05e5f
 #/usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2017.01.02_all.deb keyring.deb SHA256:4c3c6685b1181d83efe3a479c5ae38a2a44e23add55e16a328b8c8560bf05e5f
