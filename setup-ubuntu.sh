@@ -63,7 +63,7 @@ sudo apt install -y cmatrix
 sudo apt install -y git
 sudo apt install -y pidgin-sipe
 sudo apt install -y rxvt
-
+sudo apt install -y rxvt-unicode-256color
 # optional packages
 
 sudo apt install -y mate-core
