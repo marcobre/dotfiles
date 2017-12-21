@@ -51,6 +51,7 @@ Xcursor.size: 16W
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
 URxvt.font: xft:Monospace:size=10
+URxvt*letterSpace: -1
 URxvt.depth: 24
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
@@ -58,7 +59,11 @@ URxvt.transparent: true
 URxvt.shading: 20
 
 
-##URxvt.perl-ext-common: default,matcher,vtwheel
+URxvt.perl-ext-common: default,matcher,vtwheel,url-select,resize-font
+
+URxvt.resizee-font.smaller: C-j
+URxvt.resizee-font.bigger: C-k
+
 
 #rofi.fake-transparency:	true
 #rofi.lines:		3
