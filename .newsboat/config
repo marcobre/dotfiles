@@ -1,0 +1,1 @@
+macro v set browser "mpv %u --ontop --geometry=800-15-15"; open-in-browser ; set browser "w3m %u"

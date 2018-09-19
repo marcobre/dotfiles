@@ -1,7 +1,8 @@
+;; Org Configuration
 
 (require 'org)
 
-;; Org Directory
+;; Org Directory find file shortcut
 (global-set-key (kbd "C-x M-1") (lambda() (interactive)(find-file "~/Nextcloud/org/")))
 
 ;; Inline code evaluation
@@ -13,10 +14,20 @@
  '((python . t)
    ))
 
-(setq org-log-done t)
-;; Org Configuration
 (with-eval-after-load 'org
-  (setq org-agenda-files '("~/Nextcloud/org/"))
+  (setq org-directory "~/Nextcloud/org")
+  (setq org-agenda-files
+          (mapcar (lambda (path) (concat org-directory path))
+                  '("/meetings.org"
+                    "/work.org"
+                    "/projects.org"
+                    "/privat.org")))
+  (setq org-log-done 'time)
+;;(setq org-log-done t)
+;; (setq org-agenda-files '("~/Nextcloud/org/"))
+
+  
+;;  Custom Agenda View Section
   (setq org-agenda-custom-commands
         '(("v" "Simple agenda view"
            ((agenda "")
@@ -30,7 +41,24 @@
             (org-agenda-skip-function '(org-agenda-skip-entry-if 'notregexp ":CIB:")))
             )))
 
-;;  (setq org-publish-project-alist
+;; Refile target to quickly move trees between org files
+  (setq org-refile-targets
+        '(("~/Nextcloud/org/meetings.org" :maxlevel . 3)
+          ("~/Nextcloud/org/TODOs.org" :level . 1)
+          ("~/Nextcloud/org/work.org" :maxlevel . 2)))
+
+;; Archive config - move to archive file accordng to month of archiving
+  (setq org-archive-location (concat "archive/%s-"
+                                     (format-time-string "%Y%m" (current-time))
+                                     "_archiv::"))
+
+  ;; create new parent with refile on the fly
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
+
+
+  (setq org-todo-keywords '((sequence "TODO" "DOING"  "WAITING" "|" "DONE" "HOLD" "CANCELLED")))
+
+  ;;  (setq org-publish-project-alist
 ;;        '(("org"
 ;;           :base-directory "~/Nextcloud/org/"
 ;;           :publishing-directory "~/Nextcloud/org/html"
@@ -50,7 +78,8 @@
   ;; Org Mode
   (setf org-blank-before-new-entry '((heading . nil) (plain-list-item . nil)))
  ;; (setq org-hierarchical-todo-statistics nil)
- ;; (setq org-bullets-mode nil)
+  (setq org-bullets-mode t)
+  (setq org-bullets-bullet-list '("◉" "◎" "⚫" "○" "►" "◇"))
   (setq org-support-shift-select t)
 
   ;; open tree in right temp buffer
@@ -63,8 +92,8 @@
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "~/Nextcloud/org/TODOs.org" "Tasks")
            "* TODO %?\n  %i\n  %a")
-          ("j" "Journal" entry (file+datetree "~/Nextcloud/org/journal.org")
-           "* %?\nEntered on %U\n  %i\n")))
+          ("j" "Journal" entry (file+datetree "~/Nextcloud/org/journal.org" "Note")
+           "* %?\nEntered on %U\n  %i\n %a")))
  
 ;;(setq org-capture-templates
 ;;      '(("a" "Appointment" entry (file  "~/Dropbox/orgfiles/gcal.org" )
@@ -81,8 +110,5 @@
 ;;	 "* %?\nEntered on %U\n  %i\n  %a")
 ;;	("s" "Screencast" entry (file "~/Dropbox/orgfiles/screencastnotes.org")
 ;;	 "* %?\n%i\n")))
-
- (setq org-todo-keywords
-        '((sequence "TODO" "DOING"  "WAITING" "|" "DONE" "HOLD" "CANCELLED")))
 
 )

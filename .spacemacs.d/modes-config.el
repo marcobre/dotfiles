@@ -16,5 +16,8 @@
 
 ;; Deft (nv) config
 (setq deft-extensions '("md" "tex" "org" "txt"))
-(setq deft-directory "~/Dropbox/Notes")
+(setq deft-directory "~/Nextcloud/org")
 (setq deft-text-mode 'markdown-mode)
+
+(projectile-add-known-project “~/dev/repo/dotfiles”)
+(projectile-add-known-project “~/dev/projects/Backup_Gui”)
